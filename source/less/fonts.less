@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/opensans-regular.woff2") format("woff2"),
+    url("../fonts/opensans-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/opensans-semibold.woff2") format("woff2"),
+    url("../fonts/opensans-semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/opensans-extrabold.woff2") format("woff2"),
+    url("../fonts/opensans-extrabold.woff") format("woff");
+}
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #797D92;
+}
+
+.title {
+  font-weight: 600;
+  color: #20243C;
+
+  &--h1 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  &--h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  &--h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &--h4 {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  &--blue {
+    color: #0088C2;
+
+    transition: all 0.1s ease;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  &--grey {
+    color: #797D92;
+  }
+}
+
+.small-text {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@media (max-width: 940px) {
+  .title {
+    &--h2 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}

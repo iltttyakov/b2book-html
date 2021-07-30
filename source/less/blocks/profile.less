@@ -1,0 +1,58 @@
+.profile {
+  margin-top: 20px;
+  margin-bottom: 79px;
+}
+
+.profile__card {
+  margin-bottom: 8px;
+}
+
+.profile__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__column {
+  width: 645px;
+}
+
+@media (max-width: 940px) {
+  .profile__body {
+    flex-direction: column;
+  }
+
+  .profile__card {
+    flex-direction: column;
+  }
+
+  .person__photo-container {
+    width: 100%;
+    min-height: 130px;
+
+    border-right: none;
+    border-bottom: 1px solid #E3E8ED;
+  }
+
+  .person__name {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .person__right {
+    padding: 18px 18px 24px 18px;
+  }
+
+  .profile__column {
+    width: 100%;
+  }
+
+  .person__row {
+    flex-direction: column;
+    margin-right: 0;
+
+    .card__text {
+      display: block;
+      margin: 0;
+    }
+  }
+}

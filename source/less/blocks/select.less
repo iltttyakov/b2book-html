@@ -1,0 +1,39 @@
+.select {
+  position: relative;
+
+  padding-right: 18px;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    width: 12px;
+    height: 6px;
+    margin-top: -3px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/arrow.svg");
+  }
+}
+
+.select__field {
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 14px;
+  color: #797D92;
+
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #797D92;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>B2Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="../build/js/main.js"></script>
+</head>
+<body class="body-fill">
+
+<div style="display:none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+
+<header class="header">
+  <div class="header__container container">
+
+    <button class="header__burger burger">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+
+    <a href="index.html" class="header__logo logo">
+      <img class="logo__pic" src="img/logo.svg" width="129" height="32" alt="B2Book logo">
+    </a>
+
+    <form class="header__search search">
+      <div class="search__container">
+        <div class="search__input-container">
+          <input type="text" class="search__input" id="search-input" placeholder="Поиск по названию, адресу, руководителю, учредителям, ОГРН и ИНН...">
+          <label class="search__label" for="search-input">
+            <svg fill="inherit" width="17" height="20" aria-hidden="true" role="img">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+            <span class="visually-hidden">Поиск</span>
+          </label>
+        </div>
+        <button class="search__cancel" type="button">Отмена</button>
+      </div>
+    </form>
+
+    <ul class="header__menu menu">
+      <li class="menu__item">
+        <a href="#" class="menu__link">
+          Каталог организаций
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="#" class="menu__link">
+          <img class="menu__icon" src="img/user.svg" width="17" height="17" alt="Личный кабинет">
+          Личный кабинет
+        </a>
+      </li>
+    </ul>
+
+    <button class="header__show-search">
+      <svg class="header__show-search-icon" fill="inherit" width="17" height="20" aria-hidden="true" role="img">
+        <use xlink:href="#icon-search"></use>
+      </svg>
+      <span class="visually-hidden">Открыть поиск</span>
+    </button>
+
+    <div class="recent" style="display: none;">
+      <p class="recent__offer">
+        Вы можете искать по названию, адресу, руководителю, учредителям, ОГРН и ИНН.
+      </p>
+      <div class="recent__header">
+        <h2 class="recent__title title title--h4">Недавнее <span class="recent__count title--grey">(4)</span></h2>
+        <button class="recent__clear">
+          <span class="visually-hidden">Отчистить</span>
+        </button>
+      </div>
+      <ul class="recent__list">
+        <li class="recent__item">
+          <img class="recent__avatar" src="img/recent-1.jpg" width="80" height="80">
+          <h3 class="recent__item-name">ООО «Благо-Альянс»</h3>
+          <a class="recent__link" href="#"></a>
+        </li>
+        <li class="recent__item">
+          <img class="recent__avatar" src="img/recent-2.jpg" width="80" height="80">
+          <h3 class="recent__item-name">Бизнесмен Нефедов Евгений Юрьевич</h3>
+          <a class="recent__link" href="#"></a>
+        </li>
+        <li class="recent__item">
+          <img class="recent__avatar" src="img/recent-1.jpg" width="80" height="80">
+          <h3 class="recent__item-name">ООО «Благо-Альянс»</h3>
+          <a class="recent__link" href="#"></a>
+        </li>
+        <li class="recent__item">
+          <img class="recent__avatar" src="img/recent-2.jpg" width="80" height="80">
+          <h3 class="recent__item-name">Бизнесмен Нефедов Евгений Юрьевич</h3>
+          <a class="recent__link" href="#"></a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</header>
+
+<div class="subheader">
+  <div class="subheader__container container">
+    <a href="#main" class="subheader__link subheader__link--active subheader__home">
+      <svg fill="inherit" width="20" height="20" aria-hidden="true" role="img">
+        <use xlink:href="#icon-home"></use>
+      </svg>
+      <span class="visually-hidden">Основная инфомация</span>
+    </a>
+    <ul class="subheader__menu">
+      <li class="subheader__item">
+        <a href="#founders" class="subheader__link">Учредители</a>
+      </li>
+      <li class="subheader__item">
+        <a href="#reputation" class="subheader__link">Надежность</a>
+      </li>
+      <li class="subheader__item">
+        <a href="#changes" class="subheader__link">Исторические сведения</a>
+      </li>
+      <li class="subheader__item">
+        <a href="#banking" class="subheader__link">Реквизиты</a>
+      </li>
+      <li class="subheader__item">
+        <a href="#details" class="subheader__link">Виды деятельности</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container company">
+
+  <div class="company__top">
+
+    <section class="company__card company__card--big card main-info" id="main-info">
+      <!-- reliability--low -->
+      <p class="main-info__reliability reliability reliability--high">
+        Проверенная компания
+      </p>
+      <div class="main-info__logo-container">
+        <img class="main-info__logo" src="img/company-logo-1.png" width="140" height="120" alt="Логотип компании">
+      </div>
+      <div class="main-info__right">
+        <div class="main-info__header">
+          <h1 class="main-info__name title">ООО «Благо-Альянс»</h1>
+          <!-- status--liquidated -->
+          <svg class="status status__icon status--operating" fill="inherit" width="12" height="9" aria-hidden="true" role="img">
+            <use xlink:href="#icon-ok"></use>
+          </svg>
+        </div>
+        <p class="main-info__desc card__text">Крымский сельхозпроизводитель с желанием развиваться. Открыты к сотрудничеству. Небольшой земельный банк 1000+ Га. Имеем в распоряжении складские помещения 4 тыс. кв.м., зерноток 50 тыс. кв.м.</p>
+        <a href="#" class="action-link">Подробнее</a>
+      </div>
+    </section>
+
+    <section class="company__card company__card--small card contacts">
+      <h2 class="card__header card__title title title--h3">Контакты организации</h2>
+      <a class="contacts__link" href="www.blagoalyans.ru">www.blagoalyans.ru</a>
+      <p class="card__text">Москва, ул. Днепропетровская, д. 2, БЦ "Глобал Сити"</p>
+      <div class="contacts__row">
+        <a class="contacts__tel" href="tel:+7 (978) 845-05-45">+7 (978) 845-05-45</a>
+        <a class="contacts__tel" href="tel:+7 (978) 845-06-46">+7 (978) 845-06-46</a>
+      </div>
+      <a class="contacts__link" href="mailto:blago.alyans@yandex.ru">blago.alyans@yandex.ru</a>
+    </section>
+
+    <section class="company__card company__card--mobile company__card--big card details" id="details">
+      <div class="card__header details__header">
+        <h2 class="card__title title title--h3 details__title">Общество с ограниченной ответственностью «Благо-Альянс»</h2>
+        <div class="card__subtitle">
+          <div class="details__status status status--operating">
+            <svg class="status__icon" fill="inherit" width="12" height="9" aria-hidden="true" role="img">
+              <use xlink:href="#icon-ok"></use>
+            </svg>
+            Действующая организация
+          </div>
+          <div class="details__update">
+            <svg class="details__update-icon" fill="inherit" width="25" height="20" aria-hidden="true" role="img">
+              <use xlink:href="#icon-update"></use>
+            </svg>
+            Актуально на 16.12.2019
+          </div>
+          <div class="details__links">
+            <a href="#" class="details__link details__link--blue">Выписка из ЕГРЮЛ</a>
+            <a href="#" class="details__link details__link--orange">Отчет в PDF</a>
+          </div>
+          <a href="#" class="details__share">Поделиться</a>
+        </div>
+      </div>
+
+      <div class="details__body">
+        <div class="details__column">
+          <div class="details__block">
+            <div class="details__row">
+              <div class="details__small">
+                <p class="card__label">
+                  ОГРН
+                </p>
+                <p class="card__text">
+                  <span class="copy" data-info="1199112017686">1199112017686</span><br>
+                  от 29 октября 2019 г.
+                </p>
+              </div>
+              <div class="details__small">
+                <p class="card__label">
+                  ИНН/КПП
+                </p>
+                <p class="card__text">
+                  <span class="copy" data-info="7708271931">7708271931</span><br>
+                  <span class="copy" data-info="772201001">772201001</span>
+                </p>
+              </div>
+              <div class="details__small">
+                <p class="card__label">
+                  Дата регистрации
+                </p>
+                <p class="card__text">
+                  <span class="copy" data-info="10.11.2015">10.11.2015</span>
+                </p>
+              </div>
+              <div class="details__small">
+                <p class="card__label">
+                  Уставный капитал
+                </p>
+                <p class="card__text">
+                  <span class="copy" data-info="10 000 руб.">10 000 руб.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="card__label">Юридический адрес</p>
+            <p class="card__text">111033, город Москва, улица Золоторожский Вал, дом 11 строение 26, помещение а56/11</p>
+            <p class="card__label">Руководитель</p>
+            <a href="#" class="card__link details__director">Гусев Евгений Николаевич</a>
+            <p class="card__mark">Генеральный директор (с 10 ноября 2015 г.)</p>
+          </div>
+        </div>
+        <div class="details__column">
+          <div class="details__block">
+            <p class="card__label">Основной вид деятельности</p>
+            <p class="card__text">Производство промышленных газов (20.11)</p>
+            <p class="card__label">Налоговый орган</p>
+            <p class="card__text details__authority">Инспекция Федеральной налоговой службы № 22 по г.Москве</p>
+            <p class="card__mark details__authority-mark">с 12 мая 2016 г.</p>
+            <p class="card__label">Коды статистики</p>
+            <table class="details__table">
+              <tr>
+                <th class="details__table-head">ОКПО</th>
+                <td class="details__table-cell">
+                  <span class="copy" data-info="16652408">16652408</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="details__table-head">ОКАТО</th>
+                <td class="details__table-cell">
+                  <span class="copy" data-info="45290564000">45290564000</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="details__table-head">ОКОГУ</th>
+                <td class="details__table-cell">
+                  <span class="copy" data-info="4210014">4210014</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="details__table-head">ОКТМО</th>
+                <td class="details__table-cell">
+                  <span class="copy" data-info="45388000000">45388000000</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <p class="details__info">
+              По организации доступны <a href="#" class="card__link">исторические сведения</a>
+            </p>
+            <p class="card__mark details__changes-count">26 изменений</p>
+            <div class="switch">
+              <input type="checkbox" class="switch__checkbox visually-hidden" id="watch">
+              <label class="switch__label" for="watch">Следить за организацией</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details__footer">
+        <p class="card__mark">
+          ООО "Благо-Альянс" ИНН 9102259922 ОГРН 1199112017686 зарегистрировано 29.10.2019 по юридическому адресу 295048, республика Крым, город Симферополь, Балаклавская улица, дом 71, квартира 73. Статус организации: действующая. Руководителем является директор Белый Константин Александрович (ИНН 910224198069). Размер уставного капитала - 10 000 рублей.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="company__card company__card--mobile company__card--big map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aad6354ddea74aed2773862485a1327fd5602396171d413b158b82148a311b3ca&amp;source=constructor" width="870" height="300" frameborder="0"></iframe>
+      <button class="map__full">
+        <svg class="map__full-icon" width="19" height="8" aria-hidden="true" role="img">
+          <use xlink:href="#icon-arrow"></use>
+        </svg>
+        <span class="visually-hidden">Открыть карту</span>
+      </button>
+    </section>
+
+  </div>
+
+  <div class="company__body">
+
+    <section class="company__card company__card--desktop company__card--big card details" id="details">
+      <div class="card__header details__header">
+        <h2 class="card__title title title--h3 details__title">Общество с ограниченной ответственностью «Благо-Альянс»</h2>
+        <div class="card__subtitle">
+          <div class="details__status status status--operating">
+            <svg class="status__icon" fill="inherit" width="12" height="9" aria-hidden="true" role="img">
+              <use xlink:href="#icon-ok"></use>
+            </svg>
+            Действующая организация
+          </div>
+          <div class="details__update">
+            <svg class="details__update-icon" fill="inherit" width="25" height="20" aria-hidden="true" role="img">
+              <use xlink:href="#icon-update"></use>
+            </svg>
+            Актуально на 16.12.2019
+          </div>
+          <div class="details__links">
+            <a href="#" class="details__link details__link--blue">Выписка из ЕГРЮЛ</a>
+            <a href="#" class="details__link details__link--orange">Отчет в PDF</a>
+          </div>
+          <a href="#" class="details__share">Поделиться</a>
+        </div>
+      </div>
+
+      <div class="details__body">
+        <div class="details__column">
+          <div class="details__block">
+            <div class="details__row">
+              <div class="details__small">
+                <p class="card__label">
+                  ОГРН
+                </p>
+                <p class="card__text">
+                  <span class="copy" data-info="1199112017686">1199112017686</span><br>
+                  от 29 октября 2019 г.
+                </p>
+              </div>
+              <div class="details__small">
+                <p class="card__label">
+                  ИНН/КПП
+                </p>
+                <p class="card__text">
+                  <span class="copy" data-info="7708271931">7708271931</span><br>
+                  <span class="copy" data-info="772201001">772201001</span>
+                </p>
+              </div>
+              <div class="details__small">
+                <p class="card__label">
+                  Дата регистрации
+                </p>
+                <p class="card__text">
+                  <span class="copy" data-info="10.11.2015">10.11.2015</span>
+                </p>
+              </div>
+              <div class="details__small">
+                <p class="card__label">
+                  Уставный капитал
+                </p>
+                <p class="card__text">
+                  <span class="copy" data-info="10 000 руб.">10 000 руб.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="card__label">Юридический адрес</p>
+            <p class="card__text">111033, город Москва, улица Золоторожский Вал, дом 11 строение 26, помещение а56/11</p>
+            <p class="card__label">Руководитель</p>
+            <a href="#" class="card__link details__director">Гусев Евгений Николаевич</a>
+            <p class="card__mark">Генеральный директор (с 10 ноября 2015 г.)</p>
+          </div>
+        </div>
+        <div class="details__column">
+          <div class="details__block">
+            <p class="card__label">Основной вид деятельности</p>
+            <p class="card__text">Производство промышленных газов (20.11)</p>
+            <p class="card__label">Налоговый орган</p>
+            <p class="card__text details__authority">Инспекция Федеральной налоговой службы № 22 по г.Москве</p>
+            <p class="card__mark details__authority-mark">с 12 мая 2016 г.</p>
+            <p class="card__label">Коды статистики</p>
+            <table class="details__table">
+              <tr>
+                <th class="details__table-head">ОКПО</th>
+                <td class="details__table-cell">
+                  <span class="copy" data-info="1199112017686">1199112017686</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="details__table-head">ОКАТО</th>
+                <td class="details__table-cell">
+                  <span class="copy" data-info="7708271931">7708271931</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="details__table-head">ОКОГУ</th>
+                <td class="details__table-cell">
+                  <span class="copy" data-info="772201001">772201001</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="details__table-head">ОКТМО</th>
+                <td class="details__table-cell">
+                  <span class="copy" data-info="10.11.2015">10.11.2015</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <p class="details__info">
+              По организации доступны <a href="#" class="card__link">исторические сведения</a>
+            </p>
+            <p class="card__mark details__changes-count">26 изменений</p>
+            <div class="switch">
+              <input type="checkbox" class="switch__checkbox visually-hidden" id="watch-3">
+              <label class="switch__label" for="watch-3">Следить за организацией</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details__footer">
+        <p class="card__mark">
+          ООО "Благо-Альянс" ИНН 9102259922 ОГРН 1199112017686 зарегистрировано 29.10.2019 по юридическому адресу 295048, республика Крым, город Симферополь, Балаклавская улица, дом 71, квартира 73. Статус организации: действующая. Руководителем является директор Белый Константин Александрович (ИНН 910224198069). Размер уставного капитала - 10 000 рублей.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="company__card company__card--desktop company__card--big map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aad6354ddea74aed2773862485a1327fd5602396171d413b158b82148a311b3ca&amp;source=constructor" width="870" height="300" frameborder="0"></iframe>
+      <button class="map__full">
+        <svg class="map__full-icon" width="19" height="8" aria-hidden="true" role="img">
+          <use xlink:href="#icon-arrow"></use>
+        </svg>
+        <span class="visually-hidden">Открыть карту</span>
+      </button>
+    </section>
+
+    <section class="company__card company__card--mobile card banking" id="banking">
+      <a href="#" class="card__header card__title title title--blue title--h3">Банковские реквизиты</a>
+      <p class="card__label">
+        Название банка:<span class="card__text card__text--row">МОСКОВСКИЙ ФИЛИАЛ АО КБ «МОДУЛЬБАНК» г. МОСКВА</span>
+      </p>
+      <p class="card__label">
+        Бик:<span class="card__text card__text--row">043510607</span>
+      </p>
+      <p class="card__label">
+        Корр. счёт:<span class="card__text card__text--row">30101810335100000607</span>
+      </p>
+      <p class="card__label">
+        Расчётный счёт:<span class="card__text card__text--row">40702810440810006215</span>
+      </p>
+      <button class="action-link banking__copy" data-info="Название банка: МОСКОВСКИЙ ФИЛИАЛ АО КБ «МОДУЛЬБАНК» г. МОСКВА
+      Бик: 043510607
+      Корр. счёт: 30101810335100000607
+      Расчётный счёт: 40702810440810006215">
+        Скопировать реквизиты
+      </button>
+    </section>
+
+    <section class="company__card company__card--mobile company__card--small card files">
+      <h2 class="card__header card__title title title--h3">Загруженные файлы <span class="title--grey">(2)</span> </h2>
+      <ul class="files__list">
+        <li class="files__item">
+          <img class="files__icon" src="img/file.svg" width="28" height="35" alt="PDF">
+          <div class="files__right">
+            <p class="files__name">Презентация о компании</p>
+            <div class="files__bottom">
+              <a href="#" class="files__download">Скачать</a>
+              <span class="files__size">2,4 мб.</span>
+            </div>
+          </div>
+        </li>
+        <li class="files__item">
+          <img class="files__icon" src="img/file.svg" width="28" height="35" alt="PDF">
+          <div class="files__right">
+            <p class="files__name">Презентация о компании</p>
+            <div class="files__bottom">
+              <a href="#" class="files__download">Скачать</a>
+              <span class="files__size">2,4 мб.</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="company__card company__card--mobile company__card--small card reputation" id="reputation">
+      <h2 class="reputation__reliability reliability reliability--high">Надежность: высокая</h2>
+      <div class="reputation__body">
+        <p class="title title--h4 reputation__title">Выявлено 14 фактов об организации:</p>
+
+        <ul class="statistics reputation__statistics card__block">
+          <li class="statistics__item">
+            <p class="statistics__number">10</p>
+            <p class="statistics__indicator">Положительных</p>
+          </li>
+          <li class="statistics__item">
+            <p class="statistics__number">2</p>
+            <p class="statistics__indicator">Отрицательных</p>
+          </li>
+          <li class="statistics__item">
+            <p class="statistics__number">1</p>
+            <p class="statistics__indicator">Требующих внимания</p>
+          </li>
+        </ul>
+        <a href="#" class="card__link">Подробнее о рейтинге и фактах</a>
+      </div>
+    </section>
+
+    <div class="company__body-bottom">
+
+      <div class="company__body-column">
+
+        <section class="company__card company__card--bottom-column card connection">
+          <a href="#" class="card__header card__title title title--blue title--h3">Связи</a>
+          <p class="card__text">
+            Выявлен 1 связанный c ООО "Фёссен Эм Ай И" индивидуальный предприниматель.
+          </p>
+          <ul class="statistics">
+            <li class="statistics__item">
+              <p class="statistics__number">1</p>
+              <p class="statistics__indicator">По учредителю</p>
+            </li>
+            <li class="statistics__item">
+              <p class="statistics__number">1</p>
+              <p class="statistics__indicator">По руководителю</p>
+            </li>
+            <li class="statistics__item">
+              <p class="statistics__number">1</p>
+              <p class="statistics__indicator">Всего</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="company__card company__card--bottom-column card procurement">
+          <h2 class="card__header card__title title title--h3">Госзакупки</h2>
+          <p class="card__label procurement__role">Роль: <span class="card__text">Поставщик</span></p>
+          <h3 class="title title--h4 procurement__top-title">Топ-5 заказчиков <span class="title--blue">(из 16)</span></h3>
+          <div class="procurement__block">
+            <a href="#" class="procurement__name">
+              ФГУП "НИИ НПО "ЛУЧ"
+            </a>
+            <p class="card__text procurement__text">
+              2 контракта на
+              <span class="card__text--bold">
+                1 579 725 руб.
+              </span>
+            </p>
+          </div>
+          <div class="procurement__block">
+            <a href="#" class="procurement__name">
+              ФГБУ "Забайкальское Угмс"
+            </a>
+            <p class="card__text procurement__text">
+              2 контракта на
+              <span class="card__text--bold">
+                1 579 725 руб.
+              </span>
+            </p>
+          </div>
+          <div class="procurement__block">
+            <a href="#" class="procurement__name">
+              Московский Государственный Университет имени М.В.Ломоносова, МГУ имени М.В.Ломоносова, Московский Университет или МГУ
+            </a>
+            <p class="card__text procurement__text">
+              2 контракта на
+              <span class="card__text--bold">
+                1 579 725 руб.
+              </span>
+            </p>
+          </div>
+          <div class="procurement__block">
+            <a href="#" class="procurement__name">
+              ФГУП "НИИ НПО "ЛУЧ"
+            </a>
+            <p class="card__text procurement__text">
+              2 контракта на
+              <span class="card__text--bold">
+                1 579 725 руб.
+              </span>
+            </p>
+          </div>
+          <div class="procurement__block">
+            <a href="#" class="procurement__name">
+              ФГБУ "Забайкальское Угмс"
+            </a>
+            <p class="card__text procurement__text">
+              2 контракта на
+              <span class="card__text--bold">
+                1 579 725 руб.
+              </span>
+            </p>
+            <a href="#" class="card__link procurement__more">Все 16 заказчиков</a>
+          </div>
+          <div class="procurement__block">
+            <p class="card__text procurement__text">
+              Организация ООО "Фёссен Эм Ай И" являлась поставщиком в 20 государственных контрактах на сумму
+              <span class="card__text--bold">
+                1 579 725 руб.
+              </span>
+            </p>
+            <a href="#" class="card__link procurement__more">Все 20 заказчиков</a>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="company__body-column">
+
+        <section class="company__card company__card--bottom-column card founders" id="founders">
+          <a href="#" class="card__header card__title title title--blue title--h3">Учредители</a>
+          <p class="card__text">Согласно данным ЕГРЮЛ учредителем ООО "Фёссен Эм Ай И" является 1 физическое лицо:</p>
+          <a href="#" class="card__link founders__name">Гусев Евгений Николаевич</a>
+          <p class="card__label">Доля:<span class="card__text card__text--row">10 000 руб. (100%)</span></p>
+          <p class="card__label">ИНН:<span class="card__text card__text--row">482615171535</span></p>
+        </section>
+
+        <section class="company__card company__card--bottom-column card finance">
+          <div class="finance__block">
+            <h2 class="card__header card__title title title--h3 finance__title">Финансы</h2>
+            <ul class="statistics finance__statistics">
+              <li class="statistics__item statistics__item--mb15">
+                <p class="card__label statistics__label">Выручка:</p>
+                <p class="statistics__number">38<span class="statistics__unit">млн. руб</span></p>
+              </li>
+              <li class="statistics__item statistics__item--mb15">
+                <p class="card__label statistics__label">Прибыль:</p>
+                <p class="statistics__number">2,9<span class="statistics__unit">млн. руб</span></p>
+              </li>
+              <li class="statistics__item statistics__item--mb15">
+                <p class="card__label statistics__label">Стоимость:</p>
+                <p class="statistics__number">2,9<span class="statistics__unit">млн. руб</span></p>
+              </li>
+            </ul>
+            <p class="card__text">
+              Данные по финансовым показателям ООО "Проект- ресурс" приведены на основании <a href="#" class="card__text--link">бухгалтерской отчетности за 2018 год.</a>
+            </p>
+          </div>
+          <div>
+            <h2 class="title title--h4 finance__title">Согласно сведениям ФНС за 2018 год:</h2>
+            <ul class="statistics finance__statistics">
+              <li class="statistics__item statistics__item--mb15">
+                <p class="card__label statistics__label">Налоги::</p>
+                <p class="statistics__number">363<span class="statistics__unit">тыс. руб.</span></p>
+              </li>
+              <li class="statistics__item statistics__item--mb15">
+                <p class="card__label statistics__label">Взносы:</p>
+                <p class="statistics__number">176<span class="statistics__unit">тыс. руб.</span></p>
+              </li>
+              <li class="statistics__item statistics__item--mb15">
+                <p class="card__label statistics__label">Недоимки:</p>
+                <p class="statistics__number">1,9<span class="statistics__unit">тыс. руб.</span></p>
+              </li>
+            </ul>
+            <p class="card__text">
+              <a href="#" class="card__text--link">Смотреть подробные сведения</a> об уплаченных организацией в 2018 году налогах и сборах (по каждому налогу и сбору).
+            </p>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="company__sidebar">
+
+    <section class="company__card company__card--desktop company__card--small card banking" id="banking">
+      <a href="#" class="card__header card__title title title--blue title--h3">Банковские реквизиты</a>
+      <p class="card__label">
+        Название банка:<span class="card__text card__text--row">МОСКОВСКИЙ ФИЛИАЛ АО КБ «МОДУЛЬБАНК» г. МОСКВА</span>
+      </p>
+      <p class="card__label">
+        Бик:<span class="card__text card__text--row">043510607</span>
+      </p>
+      <p class="card__label">
+        Корр. счёт:<span class="card__text card__text--row">30101810335100000607</span>
+      </p>
+      <p class="card__label">
+        Расчётный счёт:<span class="card__text card__text--row">40702810440810006215</span>
+      </p>
+
+      <button class="action-link banking__copy" data-info="Название банка: МОСКОВСКИЙ ФИЛИАЛ АО КБ «МОДУЛЬБАНК» г. МОСКВА
+      Бик: 043510607
+      Корр. счёт: 30101810335100000607
+      Расчётный счёт: 40702810440810006215">
+        Скопировать реквизиты
+      </button>
+    </section>
+
+    <section class="company__card company__card--desktop company__card--small card files">
+      <h2 class="card__header card__title title title--h3">Загруженные файлы <span class="title--grey">(2)</span> </h2>
+      <ul class="files__list">
+        <li class="files__item">
+          <img class="files__icon" src="img/file.svg" width="28" height="35" alt="PDF">
+          <div class="files__right">
+            <p class="files__name">Презентация о компании</p>
+            <div class="files__bottom">
+              <a href="#" class="files__download">Скачать</a>
+              <span class="files__size">2,4 мб.</span>
+            </div>
+          </div>
+        </li>
+        <li class="files__item">
+          <img class="files__icon" src="img/file.svg" width="28" height="35" alt="PDF">
+          <div class="files__right">
+            <p class="files__name">Презентация о компании</p>
+            <div class="files__bottom">
+              <a href="#" class="files__download">Скачать</a>
+              <span class="files__size">2,4 мб.</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="company__card company__card--desktop company__card--small card reputation" id="reputation">
+      <h2 class="reputation__reliability reliability reliability--high">Надежность: высокая</h2>
+      <div class="reputation__body">
+        <p class="title title--h4 reputation__title">Выявлено 14 фактов об организации:</p>
+
+        <ul class="statistics reputation__statistics card__block">
+          <li class="statistics__item">
+            <p class="statistics__number">10</p>
+            <p class="statistics__indicator">Положительных</p>
+          </li>
+          <li class="statistics__item">
+            <p class="statistics__number">2</p>
+            <p class="statistics__indicator">Отрицательных</p>
+          </li>
+          <li class="statistics__item">
+            <p class="statistics__number">1</p>
+            <p class="statistics__indicator">Требующих внимания</p>
+          </li>
+        </ul>
+        <a href="#" class="card__link">Подробнее о рейтинге и фактах</a>
+      </div>
+    </section>
+
+    <section class="company__card company__card--small card changes" id="changes">
+      <h2 class="card__header card__title title title--h3 changes__title">Последние изменения</h2>
+
+      <ul class="changes__list">
+        <li class="changes__item">
+          <p class="card__label">24.08.2019</p>
+          <p class="card__text">Завершено исполнительное производство № 2743473/19/77043-ИП от 12.02.2019</p>
+        </li>
+        <li class="changes__item">
+          <p class="card__label">24.08.2019</p>
+          <p class="card__text">Завершено исполнительное производство № 2743473/19/77043-ИП от 12.02.2019</p>
+        </li>
+        <li class="changes__item">
+          <p class="card__label">24.08.2019</p>
+          <p class="card__text">Завершено исполнительное производство № 2743473/19/77043-ИП от 12.02.2019</p>
+        </li>
+        <li class="changes__item">
+          <p class="card__label">24.08.2019</p>
+          <p class="card__text">Завершено исполнительное производство № 2743473/19/77043-ИП от 12.02.2019</p>
+        </li>
+        <li class="changes__item">
+          <p class="card__label">24.08.2019</p>
+          <p class="card__text">Завершено исполнительное производство № 2743473/19/77043-ИП от 12.02.2019</p>
+        </li>
+      </ul>
+
+      <a href="#" class="card__link changes__all">Смотреть все изменения</a>
+      <p class="card__mark changes__count">26 изменений</p>
+
+      <div class="switch">
+        <input type="checkbox" class="switch__checkbox visually-hidden" id="watch-2">
+        <label class="switch__label" for="watch-2">Следить за организацией</label>
+      </div>
+    </section>
+
+  </div>
+
+</div>
+
+
+
+<footer class="footer">
+  <div class="footer__container container">
+    <a href="index.html" class="footer__logo logo">
+      <img src="img/logo-footer.svg" width="121" height="30">
+    </a>
+    <p class="footer__copyright">© 2019-2020</p>
+    <button class="footer__callback action-link" id="callback-modal-open">Обратная связь</button>
+    <ul class="footer__menu">
+      <li class="footer__menu-item">
+        <a href="#" class="footer__menu-link">
+          Правовые основания
+        </a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="#" class="footer__menu-link">
+          Пользовательское соглашение
+        </a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="#" class="footer__menu-link">
+          Политика конфиденциальности
+        </a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="#" class="footer__menu-link">
+          Публичная оферта
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<div style="display: none;">
+  <div class="modal" id="login-modal">
+    <button class="modal__close arcticmodal-close">
+      <svg class="modal__close-icon" width="18" height="18" aria-hidden="true" role="img">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+      <span class="visually-hidden">Закрыть окно</span>
+    </button>
+
+    <h2 class="modal__title">Личный кабинет</h2>
+    <div class="login__mode">
+      <input class="login__mode-radio visually-hidden" type="radio" name="radio-mode" value="login" id="mode-login" checked>
+      <label class="login__mode-label" for="mode-login">Войти</label>
+      <input class="login__mode-radio visually-hidden" type="radio" name="radio-mode" value="register" id="mode-register">
+      <label class="login__mode-label" for="mode-register">Зарегистрироваться</label>
+    </div>
+
+    <form class="modal__content login" id="form-login">
+      <input class="modal__input input input__field" type="text" placeholder="username@mail.ru">
+      <input class="modal__input input input__field" type="password" placeholder="********">
+      <div class="login__control modal__control">
+        <button class="login__submit button" type="submit">Войти</button>
+        <a href="#" class="login__forgot">Забыли пароль?</a>
+      </div>
+    </form>
+
+    <form class="modal__content login" id="form-register" style="display: none;">
+      <input class="modal__input input input__field" type="text" placeholder="username@mail.ru">
+      <input class="modal__input input input__field" type="password" placeholder="********">
+      <div class="login__control modal__control">
+        <button class="login__submit button" type="submit">Регистрация</button>
+      </div>
+      <div class="checkbox">
+        <input class="checkbox__field visually-hidden" type="checkbox" id="confirm">
+        <label class="checkbox__label checkbox__label--border" for="confirm">
+          Я ознакомился и принимаю условия «Политики конфиденциальности» и «Информированного согласия»
+        </label>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<div style="display: none;">
+  <div class="modal" id="callback-modal">
+    <button class="modal__close arcticmodal-close">
+      <svg class="modal__close-icon" width="18" height="18" aria-hidden="true" role="img">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+      <span class="visually-hidden">Закрыть окно</span>
+    </button>
+
+    <h2 class="modal__title">Обратная связь</h2>
+
+    <form class="modal__content login">
+      <input class="modal__input input input__field" type="text" placeholder="Имя">
+      <textarea class="modal__input input input__textarea input__field" type="password" placeholder="Комментарий"></textarea>
+      <div class="login__control modal__control">
+        <button class="login__submit button" type="submit">Отправить</button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<div style="display: none;">
+  <div class="modal" id="thanks-modal">
+    <button class="modal__close arcticmodal-close">
+      <svg class="modal__close-icon" width="18" height="18" aria-hidden="true" role="img">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+      <span class="visually-hidden">Закрыть окно</span>
+    </button>
+
+    <h2 class="modal__title modal__title--thanks">Благодарим Вас<br>за обратную связь!</h2>
+  </div>
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/chartist.min.js"></script>
+<script src="js/chartist-plugin-tooltip.min.js"></script>
+<script src="js/jquery.arcticmodal-0.3.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

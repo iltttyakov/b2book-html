@@ -1,0 +1,146 @@
+.text {
+  max-width: 1300px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  padding: 67px 50px 15px;
+
+  background: #ffffff;
+
+  h1 {
+    margin: 0;
+    margin-bottom: 22px;
+
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 46px;
+    color: #20243C;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    color: #20243C;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 35px;
+
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 22px;
+    color: #20243C;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+    max-width: 810px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  ol {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    counter-reset: num;
+    list-style-type: none;
+  }
+
+  ol li {
+    position: relative;
+
+    margin-bottom: 10px;
+    padding-left: 25px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  ol li:before {
+    content: counter(num) '.';
+    counter-increment: num;
+
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+    display: inline-block;
+    width: 20px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #0088C2;
+  }
+
+  ul {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+
+    margin-bottom: 10px;
+    padding-left: 16px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 9px;
+      left: 0;
+
+      width: 6px;
+      height: 6px;
+
+      border-radius: 50%;
+      background-color: #0088C2;
+    }
+  }
+}
+
+.text__block {
+  margin-bottom: 57px;
+}
+
+.text__columns {
+  display: flex;
+  justify-content: space-between;
+
+  ol, ul, p {
+    max-width: 580px;
+    width: 50%;
+    padding-right: 40px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .text__columns {
+    flex-direction: column;
+
+    ol, ul, p {
+      max-width: unset;
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+}

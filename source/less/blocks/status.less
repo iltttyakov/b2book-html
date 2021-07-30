@@ -1,0 +1,33 @@
+.status {
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+  line-height: 13px;
+
+  &--operating {
+    color: #2EB100;
+
+    stroke: #2EB100;
+  }
+
+  &--liquidated {
+    color: #C80000;
+
+    stroke: #C80000;
+  }
+}
+
+.status__icon {
+  width: 15px;
+  height: 19px;
+  margin-right: 8px;
+
+  fill: transparent;
+}
+
+@media (max-width: 940px) {
+  .status__icon {
+    margin-right: 6px;
+  }
+}

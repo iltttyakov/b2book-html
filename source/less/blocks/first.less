@@ -1,0 +1,147 @@
+.first {
+  position: relative;
+
+  padding-top: 62px;
+  padding-bottom: 180px;
+
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/first_bg.png");
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 1;
+  }
+}
+
+.first__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first__left {
+  max-width: 530px;
+  padding-top: 20px;
+  flex-shrink: 0;
+}
+
+.first__title {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.first__offer {
+  margin: 0;
+  margin-bottom: 36px;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.first__form-title {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.first__form-bottom {
+  display: flex;
+}
+
+.first__input {
+  margin-bottom: 20px;
+  height: 60px;
+}
+
+.first__form-submit {
+  margin-right: 10px;
+  min-width: 170px;
+}
+
+.first__right {
+  display: flex;
+  align-items: center;
+  width: 90%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../img/macbook.png");
+}
+
+@media (max-width: 1560px) {
+  .first {
+    padding-bottom: 123px;
+    margin-bottom: 39px;
+
+    background-size: cover;
+  }
+}
+
+@media (max-width: 940px) {
+  .first {
+    padding-bottom: 0;
+    padding-top: 28px;
+    margin-bottom: 41px;
+
+    background: linear-gradient(331.29deg, rgba(184, 204, 220, 0.74) 2.03%, #F0F6FB 101.46%);
+  }
+
+  .first__container {
+    flex-direction: column;
+  }
+
+  .first__left {
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .first__title {
+    margin-bottom: 14px;
+
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .first__offer {
+    margin-bottom: 19px;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .first__form-title {
+    margin-bottom: 18px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .first__input {
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  .first__button {
+    padding: 0 19px;
+    width: 100%;
+    min-width: unset;
+
+    white-space: nowrap;
+  }
+
+  .first__form-submit {
+    flex-shrink: 0.59;
+    flex-grow: unset;
+  }
+
+  .first__right {
+    height: 226px;
+    margin: 0 auto;
+
+    background-image: url("../img/iphone.png");
+  }
+}

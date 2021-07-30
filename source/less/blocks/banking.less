@@ -1,0 +1,47 @@
+.banking__copy {
+  position: relative;
+
+  margin-top: 17px;
+
+  &::before {
+    content: 'Скопировано';
+
+    position: absolute;
+    z-index: -999;
+    top: -40px;
+    left: 50%;
+
+    margin-left: -60px;
+    width: 120px;
+    height: 41px;
+    padding-top: 8px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/copy-flash.svg");
+
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+
+  &--click {
+    &::before {
+      z-index: 999;
+
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .banking__copy {
+    margin-top: 15px;
+  }
+}

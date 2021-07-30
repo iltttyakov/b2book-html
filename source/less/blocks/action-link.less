@@ -1,0 +1,35 @@
+.action-link {
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 14px;
+  color: #0088C2;
+
+  border: none;
+  background: none;
+  border-bottom: 1px dotted #0088C2;
+
+  cursor: pointer;
+  outline: none;
+  transition: all 0.1s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &--open {
+    .action-link__icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.action-link__icon {
+  margin-left: 6px;
+  width: 12px;
+  height: 6px;
+
+  fill: transparent;
+  stroke: #0088C2;
+}

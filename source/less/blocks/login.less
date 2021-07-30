@@ -1,0 +1,55 @@
+.login__mode {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 29px;
+}
+
+.login__mode-label {
+  margin-right: 19px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: #797D92;
+
+  transition: all 0.1s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #0088C2;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  border-bottom: 1px dashed transparent;
+}
+
+.login__mode-radio:checked {
+  + .login__mode-label {
+    color: #0088C2;
+
+    border-color: #0088C2;
+  }
+}
+
+.login__submit {
+  margin-right: 25px;
+}
+
+.login__forgot {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #0088C2;
+
+  transition: all 0.1s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
